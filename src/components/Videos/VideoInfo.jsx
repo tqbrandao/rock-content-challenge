@@ -29,15 +29,15 @@ function VideoInfo(props) {
         <ul className={classes["additional-infos__list"]}>
           <li className={classes["additional-info"]}>
             {" "}
-            <BsMusicPlayer /> Artist:{artistName}
+            <BsMusicPlayer /> Artist: {artistName}
           </li>
           <li className={classes["additional-info"]}>
             {" "}
-            <BsMusicNoteBeamed /> Genre:{artistGenre}
+            <BsMusicNoteBeamed /> Genre: {artistGenre}
           </li>
           <li className={classes["additional-info"]}>
             {" "}
-            <BsMusicNoteList /> Sub-Genre:{artistSubGenre}
+            <BsMusicNoteList /> Sub-Genre: {artistSubGenre}
           </li>
         </ul>
       </div>
