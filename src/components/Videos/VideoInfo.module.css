@@ -7,17 +7,15 @@
 
 .additional-infos__container {
   width: 100%;
-  /* background-color: #e0dddb; */
+
   padding: 0 1.5rem 1.5rem 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap: 1rem; */
+
   justify-items: center;
 }
 
 .additional-infos__section {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -27,8 +25,6 @@
 }
 
 .additional-infos__list {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -46,6 +42,7 @@
   text-decoration: none;
   color: #000;
   transition: all 0.3;
+  cursor: pointer;
 }
 
 .social-media__link:hover {
