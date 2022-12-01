@@ -3,7 +3,7 @@ import classes from "./VideoPreview.module.css";
 
 function VideoPreview(props) {
   return (
-    <div className={classes["video-container"]}>
+    <div className={classes["video-container"]} data-testid="video-preview">
       <iframe
         width="560"
         height="315"

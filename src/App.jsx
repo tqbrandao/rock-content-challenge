@@ -11,7 +11,7 @@ function App() {
   const [defaultUrl, setDefaultUrl] = useState(null);
 
   return (
-    <div className={`container ${!videos ? "centered" : ""}`}>
+    <div className={`container ${!videos ? "centered" : ""}`} data-testid="app">
       {!videos ? (
         <HeaderDefault
           setVideos={setVideos}

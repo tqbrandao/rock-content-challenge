@@ -5,7 +5,7 @@ import VideoPreview from "./VideoPreview";
 
 function VideoDetails(props) {
   return (
-    <div className={classes.details}>
+    <div className={classes.details} data-testid="video-details">
       <VideoPreview
         videoPreviewUrl={props.videoPreviewUrl}
         defaultUrl={props.defaultUrl}

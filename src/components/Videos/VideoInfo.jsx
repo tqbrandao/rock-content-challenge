@@ -23,7 +23,10 @@ function VideoInfo(props) {
 
   const disabled = classes["social-media__link--disabled"];
   return (
-    <div className={classes["additional-infos__container"]}>
+    <div
+      className={classes["additional-infos__container"]}
+      data-testid="video-info"
+    >
       <div className={classes["additional-infos__section"]}>
         <h2 className={classes["heading--2"]}> Additional Info</h2>
         <ul className={classes["additional-infos__list"]}>

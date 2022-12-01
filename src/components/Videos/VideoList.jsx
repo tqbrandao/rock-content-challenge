@@ -4,7 +4,7 @@ import classes from "./VideoList.module.css";
 
 function VideoList(props) {
   return (
-    <ul className={classes.results}>
+    <ul className={classes.results} data-testid="video-list">
       {props.videos &&
         props.videos.map((video) => {
           return (

@@ -3,7 +3,7 @@ import classes from "./VideoItem.module.css";
 
 function VideoItem(props) {
   return (
-    <li className={classes.preview} key={props.id}>
+    <li className={classes.preview} key={props.id} data-testid="video-item">
       <a
         className={classes["preview__link"]}
         onClick={() => {
