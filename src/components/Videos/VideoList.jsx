@@ -10,6 +10,7 @@ function VideoList(props) {
           return (
             <VideoItem
               id={video.id.videoId}
+              key={video.id.videoId}
               title={video.snippet.title}
               description={video.snippet.description}
               date={video.snippet.publishedAt.slice(0, 10)}
