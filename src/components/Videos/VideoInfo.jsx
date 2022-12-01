@@ -9,7 +9,8 @@ import {
   BsMusicNoteList,
 } from "react-icons/bs";
 
-function VideoInfo() {
+function VideoInfo(props) {
+  console.log(props.artistInfo);
   return (
     <div className={classes["additional-infos__container"]}>
       <div className={classes["additional-infos__section"]}>
@@ -17,20 +18,20 @@ function VideoInfo() {
         <ul className={classes["additional-infos__list"]}>
           <li className={classes["additional-info"]}>
             {" "}
-            {/* <BsMusicPlayer /> Artist: {artistInfo.name}{" "} */}
-            <BsMusicPlayer /> Artist: Artist{" "}
+            <BsMusicPlayer /> Artist: {props.artistInfo?.name || " "}{" "}
+            {/* <BsMusicPlayer /> Artist: Artist{" "} */}
           </li>
           <li className={classes["additional-info"]}>
             {" "}
-            {/* <BsMusicNoteBeamed /> Genre:{" "}
-            {artistInfo.classifications[0].genre.name}{" "} */}
-            <BsMusicNoteBeamed /> Genre: Genre{" "}
+            <BsMusicNoteBeamed /> Genre:{" "}
+            {props.artistInfo?.classifications[0]?.genre?.name || " "}{" "}
+            {/* <BsMusicNoteBeamed /> Genre: Genre{" "} */}
           </li>
           <li className={classes["additional-info"]}>
             {" "}
-            <BsMusicNoteList /> Sub-Genre: Sub-Genre{" "}
-            {/* <BsMusicNoteList /> Sub-Genre:{" "}
-            {artistInfo.classifications[0].subGenre.name}{" "} */}
+            {/* <BsMusicNoteList /> Sub-Genre: Sub-Genre{" "} */}
+            <BsMusicNoteList /> Sub-Genre:{" "}
+            {props.artistInfo?.classifications[0]?.subGenre?.name || " "}{" "}
           </li>
         </ul>
       </div>
@@ -39,7 +40,12 @@ function VideoInfo() {
         <h2 className={classes["heading--2"]}> Social Media Info</h2>
         <ul className={classes["additional-infos__list"]}>
           <a
-            // href={artistInfo.externalLinks.homepage[0].url}
+            // href={
+            //   props.artistInfo?.externalLinks?.homepage[0]?.url
+            //     ? props.artistInfo.externalLinks.homepage[0].url
+            //     : "."
+            // }
+            // href={props.artistInfo?.externalLinks?.homepage[0]?.url || "."}
             className={classes["social-media__link"]}
             target="_blank"
           >
@@ -49,7 +55,12 @@ function VideoInfo() {
             </li>
           </a>
           <a
-            // href={artistInfo.externalLinks.instagram[0].url}
+            // href={
+            //   props.artistInfo?.externalLinks?.instagram[0]?.url
+            //     ? props.artistInfo.externalLinks.instagram[0].url
+            //     : "."
+            // }
+            // href={props.artistInfo?.externalLinks?.instagram[0]?.url || "."}
             className={classes["social-media__link"]}
             target="_blank"
           >
@@ -59,7 +70,8 @@ function VideoInfo() {
             </li>
           </a>
           <a
-            // href={artistInfo.externalLinks.spotify[0].url}
+            // href={props.artistInfo.externalLinks.spotify[0].url || "."}
+            // href={props.artistInfo?.externalLinks?.spotify[0]?.url || "."}
             className={classes["social-media__link"]}
             target="_blank"
           >

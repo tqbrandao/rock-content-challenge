@@ -3,11 +3,14 @@ import classes from "./VideoDetails.module.css";
 import VideoInfo from "./VideoInfo";
 import VideoPreview from "./VideoPreview";
 
-function VideoDetails() {
+function VideoDetails(props) {
   return (
     <div className={classes.details}>
-      <VideoPreview />
-      <VideoInfo />
+      <VideoPreview
+        videoPreviewUrl={props.videoPreviewUrl}
+        defaultUrl={props.defaultUrl}
+      />
+      {props.artistInfo && <VideoInfo artistInfo={props.artistInfo} />}
     </div>
   );
 }

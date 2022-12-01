@@ -9,11 +9,12 @@ function VideoList(props) {
         props.videos.map((video) => {
           return (
             <VideoItem
-              key={video.id.videoId}
+              id={video.id.videoId}
               title={video.snippet.title}
               description={video.snippet.description}
               date={video.snippet.publishedAt.slice(0, 10)}
               thumb={video.snippet.thumbnails.medium.url}
+              setVideoPreviewUrl={props.setVideoPreviewUrl}
             />
           );
         })}

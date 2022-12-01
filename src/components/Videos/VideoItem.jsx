@@ -3,10 +3,13 @@ import classes from "./VideoItem.module.css";
 
 function VideoItem(props) {
   return (
-    <li className={classes.preview} key={props.key}>
+    <li className={classes.preview} key={props.id}>
       <a
         className={classes["preview__link"]}
         // onClick={() => currentVideoHandler(video.id.videoId)}
+        onClick={() => {
+          props.setVideoPreviewUrl(`https://www.youtube.com/embed/${props.id}`);
+        }}
       >
         <figure>
           <img className={classes.thumb} src={props.thumb} />

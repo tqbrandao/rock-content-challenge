@@ -23,6 +23,9 @@ function Header(props) {
     const apiVideos = data.items;
 
     props.setVideos(apiVideos);
+    props.setDefaultUrl(
+      `https://www.youtube.com/embed/${apiVideos[0].id.videoId}`
+    );
   }
 
   async function fetchTicketMasterData(e) {
