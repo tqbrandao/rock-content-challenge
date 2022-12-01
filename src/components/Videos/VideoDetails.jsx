@@ -10,7 +10,7 @@ function VideoDetails(props) {
         videoPreviewUrl={props.videoPreviewUrl}
         defaultUrl={props.defaultUrl}
       />
-      {props.artistInfo && <VideoInfo artistInfo={props.artistInfo} />}
+      <VideoInfo artistInfo={props.artistInfo} />
     </div>
   );
 }

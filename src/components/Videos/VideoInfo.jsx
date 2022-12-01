@@ -10,7 +10,18 @@ import {
 } from "react-icons/bs";
 
 function VideoInfo(props) {
-  console.log(props.artistInfo);
+  const artistName = props.artistInfo?.name || "";
+  const artistGenre = props.artistInfo?.classifications?.[0]?.genre?.name || "";
+  const artistSubGenre =
+    props.artistInfo?.classifications[0]?.subGenre?.name || "";
+  const artistHomePage =
+    props.artistInfo?.externalLinks?.homepage?.[0]?.url || ".";
+  const artistInstagram =
+    props.artistInfo?.externalLinks?.instagram?.[0]?.url || ".";
+  const artistSpotify =
+    props.artistInfo?.externalLinks?.spotify?.[0]?.url || ".";
+
+  const disabled = classes["social-media__link--disabled"];
   return (
     <div className={classes["additional-infos__container"]}>
       <div className={classes["additional-infos__section"]}>
@@ -18,20 +29,15 @@ function VideoInfo(props) {
         <ul className={classes["additional-infos__list"]}>
           <li className={classes["additional-info"]}>
             {" "}
-            <BsMusicPlayer /> Artist: {props.artistInfo?.name || " "}{" "}
-            {/* <BsMusicPlayer /> Artist: Artist{" "} */}
+            <BsMusicPlayer /> Artist:{artistName}
           </li>
           <li className={classes["additional-info"]}>
             {" "}
-            <BsMusicNoteBeamed /> Genre:{" "}
-            {props.artistInfo?.classifications[0]?.genre?.name || " "}{" "}
-            {/* <BsMusicNoteBeamed /> Genre: Genre{" "} */}
+            <BsMusicNoteBeamed /> Genre:{artistGenre}
           </li>
           <li className={classes["additional-info"]}>
             {" "}
-            {/* <BsMusicNoteList /> Sub-Genre: Sub-Genre{" "} */}
-            <BsMusicNoteList /> Sub-Genre:{" "}
-            {props.artistInfo?.classifications[0]?.subGenre?.name || " "}{" "}
+            <BsMusicNoteList /> Sub-Genre:{artistSubGenre}
           </li>
         </ul>
       </div>
@@ -40,13 +46,10 @@ function VideoInfo(props) {
         <h2 className={classes["heading--2"]}> Social Media Info</h2>
         <ul className={classes["additional-infos__list"]}>
           <a
-            // href={
-            //   props.artistInfo?.externalLinks?.homepage[0]?.url
-            //     ? props.artistInfo.externalLinks.homepage[0].url
-            //     : "."
-            // }
-            // href={props.artistInfo?.externalLinks?.homepage[0]?.url || "."}
-            className={classes["social-media__link"]}
+            href={artistHomePage}
+            className={`${classes["social-media__link"]} ${
+              artistHomePage === "." ? disabled : ""
+            } `}
             target="_blank"
           >
             <li className={classes["additional-info"]}>
@@ -55,13 +58,10 @@ function VideoInfo(props) {
             </li>
           </a>
           <a
-            // href={
-            //   props.artistInfo?.externalLinks?.instagram[0]?.url
-            //     ? props.artistInfo.externalLinks.instagram[0].url
-            //     : "."
-            // }
-            // href={props.artistInfo?.externalLinks?.instagram[0]?.url || "."}
-            className={classes["social-media__link"]}
+            href={artistInstagram}
+            className={`${classes["social-media__link"]} ${
+              artistInstagram === "." ? disabled : ""
+            } `}
             target="_blank"
           >
             <li className={classes["additional-info"]}>
@@ -70,9 +70,10 @@ function VideoInfo(props) {
             </li>
           </a>
           <a
-            // href={props.artistInfo.externalLinks.spotify[0].url || "."}
-            // href={props.artistInfo?.externalLinks?.spotify[0]?.url || "."}
-            className={classes["social-media__link"]}
+            href={artistSpotify}
+            className={`${classes["social-media__link"]} ${
+              artistSpotify === "." ? disabled : ""
+            } `}
             target="_blank"
           >
             <li className={classes["additional-info"]}>

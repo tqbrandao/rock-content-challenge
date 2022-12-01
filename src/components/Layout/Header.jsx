@@ -5,8 +5,6 @@ import { BsSearch } from "react-icons/bs";
 
 function Header(props) {
   const [input, setInput] = useState("");
-  // const [videos, setVideos] = useState(null);
-  // const [artistInfo, setArtistInfo] = useState(null);
 
   function changeInputHandler(e) {
     setInput(e.target.value);
@@ -14,7 +12,7 @@ function Header(props) {
 
   async function fetchVideosHandler(e) {
     e.preventDefault();
-    const API_KEY_YT = "AIzaSyCEeEmF_zYECwCUDUFKQi4i3VasCH28uMk";
+    const API_KEY_YT = import.meta.env.VITE_API_KEY_YT;
     const artist = input.replace(" ", "%");
     const URL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${artist}&key=${API_KEY_YT}`;
 
@@ -30,13 +28,14 @@ function Header(props) {
 
   async function fetchTicketMasterData(e) {
     e.preventDefault();
-    const API_KEY_TM = "bYjUI8NZXoqIXO1WsRPkmGcka8pQ7w91";
+    props.setArtistInfo(null);
+    const API_KEY_TM = import.meta.env.VITE_API_KEY_TM;
     const artist = input.replace(" ", "%20");
     const URL = `https://app.ticketmaster.com/discovery/v2/attractions?apikey=${API_KEY_TM}&keyword=${artist}}&locale=*`;
 
     const response = await fetch(URL);
     const data = await response.json();
-    const info = data._embedded.attractions[0];
+    const info = data?._embedded?.attractions?.[0];
 
     props.setArtistInfo(info);
   }

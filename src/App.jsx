@@ -19,11 +19,13 @@ function App() {
       <main>
         <div className="results-container">
           <VideoList videos={videos} setVideoPreviewUrl={setVideoPreviewUrl} />
-          <VideoDetails
-            artistInfo={artistInfo}
-            videoPreviewUrl={videoPreviewUrl}
-            defaultUrl={defaultUrl}
-          />
+          {
+            <VideoDetails
+              artistInfo={artistInfo}
+              videoPreviewUrl={videoPreviewUrl}
+              defaultUrl={defaultUrl}
+            />
+          }
         </div>
       </main>
     </div>

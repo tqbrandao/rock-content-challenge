@@ -48,3 +48,8 @@
 .social-media__link:hover {
   color: #666;
 }
+
+.social-media__link--disabled {
+  color: #999;
+  pointer-events: none;
+}
