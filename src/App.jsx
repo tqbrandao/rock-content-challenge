@@ -4,14 +4,15 @@ import VideoDetails from "./components/Videos/VideoDetails";
 import VideoList from "./components/Videos/VideoList";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [videos, setVideos] = useState(null);
+  const [artistInfo, setArtistInfo] = useState(null);
 
   return (
     <div className="container">
-      <Header />
+      <Header setVideos={setVideos} setArtistInfo={setArtistInfo} />
       <main>
         <div className="results-container">
-          <VideoList />
+          <VideoList videos={videos} />
           <VideoDetails />
         </div>
       </main>

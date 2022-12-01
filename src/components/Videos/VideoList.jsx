@@ -2,14 +2,21 @@ import React from "react";
 import VideoItem from "./VideoItem";
 import classes from "./VideoList.module.css";
 
-function VideoList() {
+function VideoList(props) {
   return (
     <ul className={classes.results}>
-      <VideoItem />
-      <VideoItem />
-      <VideoItem />
-      <VideoItem />
-      <VideoItem />
+      {props.videos &&
+        props.videos.map((video) => {
+          return (
+            <VideoItem
+              key={video.id.videoId}
+              title={video.snippet.title}
+              description={video.snippet.description}
+              date={video.snippet.publishedAt.slice(0, 10)}
+              thumb={video.snippet.thumbnails.medium.url}
+            />
+          );
+        })}
     </ul>
   );
 }
