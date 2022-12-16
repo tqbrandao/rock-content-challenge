@@ -1,6 +1,6 @@
-# Rock Content Coding Challenge 🤘
+# Rock On Project 🤘
 
-This React JS application which retrieves data from two API's (Youtube and Ticketmaster) and displays the most popular videos and information about any artist or band.
+This is a React JS desktop application (at least for now, will make it mobile friendly soon) which retrieves data from two API's (Youtube and Ticketmaster) and displays the most popular videos and information about any artist or band.
 
 ## Implementation
 
@@ -10,11 +10,11 @@ React JS with Vite
 
 ### 🎨 Styling
 
-CSS Modules, rem units for responsiveness and BEM (Block Element Modifier) for CSS naming standardization
+CSS Modules and BEM (Block Element Modifier) for CSS naming standardization
 
 ### 💾 Tests
 
-Unit tests with Vitest and React's Testing Library
+Unit tests with Jest, Vitest and React's Testing Library
 
 ## Usage
 

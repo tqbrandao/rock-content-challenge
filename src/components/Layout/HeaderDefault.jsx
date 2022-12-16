@@ -42,7 +42,7 @@ function HeaderDefault(props) {
 
   return (
     <header className={classes.header}>
-      <h1 className={classes["heading--primary"]}>🤟Rock Content 🤟</h1>
+      <h1 className={classes["heading--primary"]}>🤟Rock On App 🤟</h1>
       <form
         className={classes.search}
         onSubmit={(e) => {
