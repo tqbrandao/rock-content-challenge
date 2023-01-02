@@ -2,3 +2,11 @@
   padding: 1.7rem 0;
   width: 100%;
 }
+
+/* ----------- MEDIA QUERIES --------- */
+
+@media (max-width: 30em) {
+  .results {
+    padding: 0.7rem 0;
+  }
+}

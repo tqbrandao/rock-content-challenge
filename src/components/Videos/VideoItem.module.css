@@ -46,7 +46,7 @@
 
 @media (max-width: 30em) {
   .preview__link {
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 0.75rem;
     /* width: 100%; */
   }
 
@@ -57,13 +57,13 @@
 
   .preview__title {
     font-size: 1.4rem;
-    max-width: 18rem;
+    max-width: 19rem;
   }
 
   .preview__description {
     font-size: 1.2rem;
     text-overflow: ellipsis;
-    max-width: 18rem;
+    max-width: 19rem;
     white-space: nowrap;
     overflow: hidden;
   }
