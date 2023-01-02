@@ -99,7 +99,7 @@
     align-items: center;
     justify-items: center;
     background-color: #f9f5f3;
-    padding: 1.5rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .heading--primary {
@@ -108,7 +108,8 @@
   }
 
   .search__field {
-    width: 23rem;
+    max-width: 20rem;
+    padding-left: 1.2rem;
   }
 
   .search {

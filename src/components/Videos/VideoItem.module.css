@@ -47,22 +47,23 @@
 @media (max-width: 30em) {
   .preview__link {
     padding: 0.5rem 1rem;
+    /* width: 100%; */
   }
 
   .thumb {
-    height: 8rem;
+    height: 6rem;
     margin-right: 1rem;
   }
 
   .preview__title {
-    font-size: 1.6rem;
-    max-width: 23rem;
+    font-size: 1.4rem;
+    max-width: 18rem;
   }
 
   .preview__description {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-overflow: ellipsis;
-    max-width: 23rem;
+    max-width: 18rem;
     white-space: nowrap;
     overflow: hidden;
   }

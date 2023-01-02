@@ -42,7 +42,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   max-width: 120rem;
 }
 
@@ -57,7 +57,7 @@ body {
 
 @media (max-width: 30em) {
   .container {
-    max-width: 120rem;
+    max-width: 32rem;
     margin: 10vw auto;
     background-color: #fff;
     border-radius: 9px;
