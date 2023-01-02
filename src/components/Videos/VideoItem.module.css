@@ -41,3 +41,29 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* --------------- MEDIA QUERIES -------------- */
+
+@media (max-width: 30em) {
+  .preview__link {
+    padding: 0.5rem 1rem;
+  }
+
+  .thumb {
+    height: 8rem;
+    margin-right: 1rem;
+  }
+
+  .preview__title {
+    font-size: 1.6rem;
+    max-width: 23rem;
+  }
+
+  .preview__description {
+    font-size: 1.3rem;
+    text-overflow: ellipsis;
+    max-width: 23rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import classes from "./Header.module.css";
+import classes from "./HeaderDefault.module.css";
 import { BsSearch } from "react-icons/bs";
 
 function HeaderDefault(props) {

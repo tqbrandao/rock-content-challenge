@@ -43,5 +43,30 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120rem;
+  max-width: 120rem;
+}
+
+/* --------------- MEDIA QUERIES -------------- */
+
+@media (max-width: 75em) {
+  .results-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 30em) {
+  .container {
+    max-width: 120rem;
+    margin: 10vw auto;
+    background-color: #fff;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 2rem 6rem 0.5rem rgba(#615551, 0.2);
+  }
+
+  .results-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
