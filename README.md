@@ -1,6 +1,6 @@
 # Rock On Project 🤘
 
-This is a React JS desktop application (at least for now, will make it mobile friendly soon) which retrieves data from two API's (Youtube and Ticketmaster) and displays the most popular videos and information about any artist or band.
+This is a responsive React JS application which retrieves data from two API's (Youtube and Ticketmaster) and displays the most popular videos and information about any artist or band.
 
 ## Implementation
 
